@@ -26,7 +26,7 @@ export class PetAbstracted extends pulumi.ComponentResource {
             case "large":
                 petNameLength = 6;
                 break;
-            case "extra-large":
+            case "xlarge":
                 petNameLength = 8;
                 break;
             default:
