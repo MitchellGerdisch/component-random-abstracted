@@ -32,7 +32,7 @@ export class PetAbstracted extends pulumi.ComponentResource {
             default:
                 petNameLength = Number(size);
                 if (isNaN(petNameLength)) {
-                    throw new Error(`Invalid size: ${size}. Must be small, medium, large or xlarge or a number string.`);
+                    throw new Error(`Invalid size: "${size}". Must be small, medium, large or xlarge or a number string.`);
                 }
         }
 
