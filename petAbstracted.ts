@@ -30,7 +30,10 @@ export class PetAbstracted extends pulumi.ComponentResource {
                 petNameLength = 8;
                 break;
             default:
-                throw new Error("Invalid size. Must be small, medium, large or xlarge.");
+                petNameLength = Number(size);
+                if (isNaN(petNameLength)) {
+                    throw new Error(`Invalid size: ${size}. Must be small, medium, large or xlarge or a number string.`);
+                }
         }
 
         const petName = new random.RandomPet("petName", {
