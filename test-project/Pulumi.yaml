@@ -6,7 +6,7 @@ resources:
   myPetName:
     type: random-abstracted:PetAbstracted
     properties:
-      size: "xlarge"
+      size: "medium"
 outputs: 
   myPetName:
     value: ${myPetName.petName}
