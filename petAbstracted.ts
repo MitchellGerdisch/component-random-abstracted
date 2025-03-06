@@ -7,7 +7,7 @@ export interface PetAbstractedArgs {
 
 // This resources helps you create a self signed certificate.
 export class PetAbstracted extends pulumi.ComponentResource {
-    // The PEM of your self signed cert.
+    // Return the generated pet name
     public readonly petName: pulumi.Output<string>;
 
     constructor(name: string, args: PetAbstractedArgs, opts?: pulumi.ComponentResourceOptions) {
