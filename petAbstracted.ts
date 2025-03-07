@@ -5,7 +5,7 @@ export interface PetAbstractedArgs {
     size: string;
 }
 
-// This resources helps you create a self signed certificate.
+// This resource abstracts using the RandomPet resource to generate a pet name based on a size parameter.
 export class PetAbstracted extends pulumi.ComponentResource {
     // Return the generated pet name
     public readonly petName: pulumi.Output<string>;
@@ -41,5 +41,8 @@ export class PetAbstracted extends pulumi.ComponentResource {
         }, { parent: this });
 
         this.petName = petName.id
+
+        this.registerOutputs({});
+
     }
 }
